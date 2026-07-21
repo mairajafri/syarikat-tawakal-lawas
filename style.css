@@ -1,46 +1,71 @@
-/* =========================
+/* ================================
    GLOBAL SETTINGS
-========================= */
+================================ */
+
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
-}
-
-
-html {
     scroll-behavior: smooth;
 }
 
 
 body {
-    background: #fafafa;
-    color: #333;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
     line-height: 1.7;
+
+    color: #2b2118;
+
+    background: #fff8ed;
+
 }
 
 
 
 
 
-/* =========================
-   HEADER & NAVIGATION
-========================= */
+/* ================================
+   COLORS
+================================ */
+
+
+:root {
+
+    --dark: #17120d;
+
+    --gold: #c89b3c;
+
+    --gold-light: #e8c875;
+
+    --cream: #fff3d6;
+
+    --white: #ffffff;
+
+    --brown: #5b3924;
+
+}
+
+
+
+
+
+/* ================================
+   NAVIGATION
+================================ */
 
 
 header {
 
-    background: white;
+    background: var(--dark);
 
     position: sticky;
 
     top: 0;
 
     z-index: 1000;
-
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 
 }
 
@@ -52,13 +77,77 @@ nav {
 
     margin: auto;
 
-    padding: 15px 30px;
+    padding: 18px 40px;
 
-    display:flex;
+    display: flex;
 
-    justify-content:space-between;
+    justify-content: space-between;
 
-    align-items:center;
+    align-items: center;
+
+}
+
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: var(--gold-light);
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+.logo img {
+
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+}
+
+
+
+nav ul {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 25px;
+
+}
+
+
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: .3s;
+
+}
+
+
+
+nav a:hover {
+
+    color: var(--gold-light);
 
 }
 
@@ -66,17 +155,214 @@ nav {
 
 
 
-.logo {
 
-    display:flex;
+/* ================================
+   HERO
+================================ */
 
-    align-items:center;
 
-    gap:12px;
+.hero {
 
-    font-weight:700;
+    min-height: 90vh;
 
-    color:#8b0000;
+    background:
+
+    linear-gradient(
+    rgba(23,18,13,.88),
+    rgba(23,18,13,.88)
+    ),
+
+    url("images/fatiyah1.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color:white;
+
+}
+
+
+
+.hero-content {
+
+    max-width: 850px;
+
+    padding: 40px;
+
+}
+
+
+
+.hero-logo {
+
+    width: 160px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.hero h1 {
+
+    font-size: 48px;
+
+    color: var(--gold-light);
+
+    text-transform: uppercase;
+
+}
+
+
+
+.hero h2 {
+
+    margin: 10px;
+
+    font-size: 28px;
+
+}
+
+
+
+.hero-tagline {
+
+    font-size: 20px;
+
+    margin: 25px 0;
+
+}
+
+
+
+
+
+.hero-buttons {
+
+    margin-top: 35px;
+
+}
+
+
+
+.btn-primary,
+.btn-secondary {
+
+
+    display: inline-block;
+
+    padding: 12px 30px;
+
+    margin: 10px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    transition: .3s;
+
+}
+
+
+
+.btn-primary {
+
+    background: var(--gold);
+
+    color:white;
+
+}
+
+
+
+.btn-secondary {
+
+    border:2px solid var(--gold);
+
+    color:white;
+
+}
+
+
+
+.btn-primary:hover,
+.btn-secondary:hover {
+
+    transform: translateY(-4px);
+
+}
+
+
+
+
+
+
+
+/* ================================
+   GENERAL SECTION
+================================ */
+
+
+section {
+
+    padding: 80px 10%;
+
+}
+
+
+
+.section-title {
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.section-title h2 {
+
+    font-size:35px;
+
+    color:var(--brown);
+
+}
+
+
+
+.section-title p {
+
+    color:#777;
+
+}
+
+
+
+
+
+/* ================================
+   ABOUT
+================================ */
+
+
+.about-content {
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
 
     font-size:18px;
 
@@ -85,178 +371,35 @@ nav {
 
 
 
-.logo img {
-
-    width:60px;
-
-    height:60px;
-
-    object-fit:contain;
-
-}
 
 
 
+/* ================================
+   HIGHLIGHTS
+================================ */
 
 
-nav ul {
+.highlights {
 
-    list-style:none;
+    background:var(--dark);
 
-    display:flex;
+    display:grid;
 
-    gap:25px;
-
-}
-
-
-
-
-nav ul li a {
-
-    text-decoration:none;
-
-    color:#333;
-
-    font-weight:600;
-
-    transition:0.3s;
-
-}
-
-
-
-nav ul li a:hover {
-
-    color:#b8860b;
-
-}
-
-
-
-
-
-
-
-/* =========================
-   HERO SECTION
-========================= */
-
-
-.hero {
-
-    min-height:90vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
+    grid-template-columns:repeat(4,1fr);
 
     text-align:center;
 
-    padding:60px 20px;
-
-    background:white;
+    color:white;
 
 }
 
 
 
-.hero-logo {
+.highlight-box h3 {
 
-    width:180px;
+    color:var(--gold-light);
 
-    margin-bottom:25px;
-
-}
-
-
-
-
-.hero h1 {
-
-    font-size:42px;
-
-    color:#8b0000;
-
-}
-
-
-
-
-.hero h2 {
-
-    color:#b8860b;
-
-    margin:10px 0 20px;
-
-}
-
-
-
-
-.hero p {
-
-    max-width:850px;
-
-    margin:10px auto;
-
-}
-
-
-
-
-.hero h3 {
-
-    margin:25px 0;
-
-}
-
-
-
-
-
-
-
-/* =========================
-   GENERAL SECTION
-========================= */
-
-
-section {
-
-    max-width:1100px;
-
-    margin:auto;
-
-    padding:70px 30px;
-
-}
-
-
-
-
-section h2 {
-
-    text-align:center;
-
-    font-size:32px;
-
-    color:#8b0000;
-
-    margin-bottom:35px;
-
-}
-
-
-
-
-section p {
-
-    margin-bottom:18px;
+    font-size:45px;
 
 }
 
@@ -267,34 +410,44 @@ section p {
 
 
 
-/* =========================
-   BRAND SECTION
-========================= */
+/* ================================
+   BRAND
+================================ */
+
+
+.brand-grid {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
 
 
 .brand-card {
+
 
     background:white;
 
     padding:35px;
 
-    margin-bottom:35px;
+    border-radius:20px;
 
-    border-radius:15px;
-
-    box-shadow:
-    0 5px 20px rgba(0,0,0,0.08);
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
 
 }
 
 
 
+.brand-card img {
 
-.brand-card h3 {
+    width:100%;
 
-    color:#8b0000;
-
-    font-size:25px;
+    border-radius:15px;
 
     margin-bottom:20px;
 
@@ -302,197 +455,9 @@ section p {
 
 
 
+.brand-card h3 {
 
-
-
-
-/* FATIYAH IMAGE */
-
-
-.fatiyah-images {
-
-    display:flex;
-
-    gap:20px;
-
-    justify-content:center;
-
-    margin-bottom:25px;
-
-}
-
-
-
-
-.fatiyah-images img {
-
-    width:45%;
-
-    height:350px;
-
-    object-fit:cover;
-
-    border-radius:15px;
-
-}
-
-
-
-
-
-
-
-/* =========================
-   SERVICES
-========================= */
-
-
-.service-container {
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:25px;
-
-}
-
-
-
-
-.service-card {
-
-    background:white;
-
-    padding:25px;
-
-    border-radius:15px;
-
-    box-shadow:
-    0 5px 15px rgba(0,0,0,0.08);
-
-}
-
-
-
-.service-card h3 {
-
-    color:#8b0000;
-
-    margin-bottom:10px;
-
-}
-
-
-
-
-
-
-
-
-/* =========================
-   WHY CHOOSE US
-========================= */
-
-
-.check-list {
-
-    list-style:none;
-
-    background:white;
-
-    padding:35px;
-
-    border-radius:15px;
-
-    box-shadow:
-    0 5px 15px rgba(0,0,0,0.08);
-
-}
-
-
-
-
-
-
-
-/* =========================
-   CAREER
-========================= */
-
-
-#career {
-
-    background:#fff8e7;
-
-    border-radius:20px;
-
-}
-
-
-
-#career h3 {
-
-    color:#8b0000;
-
-    margin:20px 0;
-
-}
-
-
-
-
-
-
-
-
-/* =========================
-   CONTACT
-========================= */
-
-
-#contact {
-
-    background:white;
-
-    border-radius:20px;
-
-}
-
-
-
-.contact-box {
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:25px;
-
-    margin:30px 0;
-
-}
-
-
-
-.contact-card {
-
-    background:#fafafa;
-
-    padding:25px;
-
-    border-radius:15px;
-
-    box-shadow:
-    0 5px 15px rgba(0,0,0,0.08);
-
-}
-
-
-
-.contact-card h3 {
-
-    color:#8b0000;
+    color:var(--brown);
 
     margin-bottom:15px;
 
@@ -500,33 +465,249 @@ section p {
 
 
 
+.brand-card li {
+
+    margin-left:20px;
+
+}
 
 
 
 
 
-/* =========================
+
+
+/* ================================
+   SERVICES
+================================ */
+
+
+.service-grid {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.service-card {
+
+
+    background:var(--cream);
+
+    padding:25px;
+
+    border-radius:18px;
+
+    border-top:5px solid var(--gold);
+
+    transition:.3s;
+
+}
+
+
+
+.service-card:hover {
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.service-card h3 {
+
+    color:var(--brown);
+
+}
+
+
+
+
+
+
+
+/* ================================
+   WHY US
+================================ */
+
+
+.why-us {
+
+    background:#f6e7c8;
+
+}
+
+
+
+.why-grid {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.why-card {
+
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+
+
+
+
+
+/* ================================
+   CAREER
+================================ */
+
+
+#career ul {
+
+    max-width:500px;
+
+    margin:25px auto;
+
+}
+
+
+
+#career li {
+
+    margin:10px;
+
+}
+
+
+
+
+
+/* ================================
+   GALLERY
+================================ */
+
+
+.gallery-box {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.gallery-box img {
+
+    width:100%;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+
+/* ================================
+   CONTACT
+================================ */
+
+
+.contact-container {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.contact-card {
+
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+
+
+.contact-card h3 {
+
+    color:var(--brown);
+
+}
+
+
+
+.contact-card a {
+
+    color:green;
+
+    text-decoration:none;
+
+}
+
+
+
+
+
+
+
+/* ================================
    FOOTER
-========================= */
+================================ */
 
 
 footer {
 
-    background:#8b0000;
+
+    background:var(--dark);
 
     color:white;
 
     text-align:center;
 
-    padding:35px 20px;
+    padding:50px 20px;
 
 }
 
 
 
-footer h3 {
+footer h2 {
 
-    margin-bottom:10px;
+    color:var(--gold-light);
 
 }
 
@@ -537,23 +718,19 @@ footer h3 {
 
 
 
-/* =========================
+/* ================================
    MOBILE RESPONSIVE
-========================= */
+================================ */
 
 
-@media(max-width:768px){
-
+@media(max-width:900px){
 
 
 nav {
 
     flex-direction:column;
 
-    gap:15px;
-
 }
-
 
 
 nav ul {
@@ -562,73 +739,37 @@ nav ul {
 
     justify-content:center;
 
-    gap:15px;
+    margin-top:20px;
 
 }
-
 
 
 
 .hero h1 {
 
-    font-size:30px;
+    font-size:35px;
 
 }
 
 
 
-.hero-logo {
+.highlights,
+.brand-grid,
+.service-grid,
+.why-grid,
+.contact-container,
+.gallery-box {
 
-    width:130px;
-
-}
-
-
-
-
-.service-container {
 
     grid-template-columns:1fr;
 
 }
-
-
-
-
-
-.contact-box {
-
-    grid-template-columns:1fr;
-
-}
-
-
-
-
-
-.fatiyah-images {
-
-    flex-direction:column;
-
-}
-
-
-
-
-.fatiyah-images img {
-
-    width:100%;
-
-    height:auto;
-
-}
-
 
 
 
 section {
 
-    padding:50px 20px;
+    padding:60px 6%;
 
 }
 
