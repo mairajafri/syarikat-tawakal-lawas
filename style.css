@@ -1,45 +1,29 @@
 /* =====================================
-   RESET & GLOBAL
+   RESET
 ===================================== */
 
-
 * {
-
     margin:0;
-
     padding:0;
-
     box-sizing:border-box;
-
     scroll-behavior:smooth;
-
 }
-
 
 
 :root {
 
-
     --dark:#17120d;
-
-    --dark-soft:#241a12;
-
+    --dark2:#2b1d12;
 
     --gold:#c89b3c;
-
     --gold-light:#f0d58a;
 
-
     --cream:#fff7e8;
-
     --cream-dark:#f3dfb8;
-
 
     --brown:#5b3924;
 
-
     --text:#33261c;
-
 
     --white:#ffffff;
 
@@ -47,24 +31,18 @@
 
 
 
-
 body {
-
 
     font-family:
     "Segoe UI",
     Arial,
     sans-serif;
 
-
     background:var(--cream);
-
 
     color:var(--text);
 
-
     line-height:1.7;
-
 
 }
 
@@ -75,24 +53,19 @@ body {
 
 
 /* =====================================
-   HEADER & NAVIGATION
+   HEADER
 ===================================== */
 
 
 header {
 
-
     background:var(--dark);
-
 
     position:sticky;
 
-
     top:0;
 
-
     z-index:999;
-
 
 }
 
@@ -100,24 +73,17 @@ header {
 
 nav {
 
-
     max-width:1200px;
-
 
     margin:auto;
 
-
     padding:15px 40px;
-
 
     display:flex;
 
-
     justify-content:space-between;
 
-
     align-items:center;
-
 
 }
 
@@ -125,24 +91,15 @@ nav {
 
 .logo {
 
-
     display:flex;
-
 
     align-items:center;
 
-
     gap:15px;
-
 
     color:var(--gold-light);
 
-
     font-weight:bold;
-
-
-    letter-spacing:1px;
-
 
 }
 
@@ -150,32 +107,23 @@ nav {
 
 .logo img {
 
-
     width:60px;
-
 
     height:60px;
 
-
     object-fit:contain;
-
 
 }
 
 
 
-
 nav ul {
-
 
     display:flex;
 
-
     list-style:none;
 
-
     gap:25px;
-
 
 }
 
@@ -183,15 +131,11 @@ nav ul {
 
 nav ul a {
 
-
     color:white;
-
 
     text-decoration:none;
 
-
     transition:.3s;
-
 
 }
 
@@ -199,12 +143,9 @@ nav ul a {
 
 nav ul a:hover {
 
-
     color:var(--gold-light);
 
-
 }
-
 
 
 
@@ -213,164 +154,114 @@ nav ul a:hover {
 
 
 /* =====================================
-   HERO
+   HERO - PLAIN BACKGROUND
 ===================================== */
 
 
 .hero {
 
-
     min-height:90vh;
-
 
     display:flex;
 
-
     justify-content:center;
-
 
     align-items:center;
 
-
     text-align:center;
-
 
     color:white;
 
-
-    background:
-
-    linear-gradient(
-    135deg,
-    #17120d,
-    #3a2818
-    );
-
+    background:#17120d;
 
 }
-
 
 
 
 .hero-content {
 
-
     max-width:850px;
-
 
     padding:40px;
 
-
 }
-
 
 
 
 .hero-logo {
 
-
     width:170px;
-
 
     margin-bottom:25px;
 
-
 }
-
 
 
 
 .hero h1 {
 
-
     font-size:48px;
-
-
-    color:var(--gold-light);
-
 
     text-transform:uppercase;
 
+    color:var(--gold-light);
 
 }
-
 
 
 
 .hero h2 {
 
-
     font-size:28px;
 
-
 }
-
 
 
 
 .hero-tagline {
 
-
     font-size:20px;
-
 
     margin:25px 0;
 
-
 }
-
 
 
 
 .btn-primary,
 .btn-secondary {
 
-
     display:inline-block;
-
 
     padding:12px 30px;
 
-
     margin:10px;
-
 
     border-radius:30px;
 
-
     text-decoration:none;
-
 
     transition:.3s;
 
-
 }
-
 
 
 
 .btn-primary {
 
-
     background:var(--gold);
 
-
     color:white;
-
 
 }
 
 
 
-
 .btn-secondary {
-
 
     border:2px solid var(--gold);
 
-
     color:white;
-
 
 }
 
@@ -379,13 +270,9 @@ nav ul a:hover {
 .btn-primary:hover,
 .btn-secondary:hover {
 
-
     transform:translateY(-5px);
 
-
 }
-
-
 
 
 
@@ -400,51 +287,37 @@ nav ul a:hover {
 
 section {
 
-
     padding:80px 10%;
 
-
 }
-
 
 
 
 .section-title {
 
-
     text-align:center;
-
 
     margin-bottom:45px;
 
-
 }
-
 
 
 
 .section-title h2 {
 
+    color:var(--brown);
 
     font-size:36px;
 
-
-    color:var(--brown);
-
-
 }
-
 
 
 
 .section-title p {
 
-
     color:#777;
 
-
 }
-
 
 
 
@@ -459,21 +332,15 @@ section {
 
 .about-content {
 
-
     max-width:900px;
-
 
     margin:auto;
 
-
     text-align:center;
-
 
     font-size:18px;
 
-
 }
-
 
 
 
@@ -488,21 +355,15 @@ section {
 
 .highlights {
 
-
     background:var(--dark);
-
 
     display:grid;
 
-
     grid-template-columns:repeat(4,1fr);
-
 
     text-align:center;
 
-
     color:white;
-
 
 }
 
@@ -510,26 +371,19 @@ section {
 
 .highlight-box {
 
-
     padding:35px 20px;
 
-
 }
-
 
 
 
 .highlight-box h3 {
 
-
     font-size:45px;
-
 
     color:var(--gold-light);
 
-
 }
-
 
 
 
@@ -544,79 +398,55 @@ section {
 
 .brand-grid {
 
-
     display:grid;
-
 
     grid-template-columns:repeat(2,1fr);
 
-
     gap:35px;
 
-
 }
-
 
 
 
 .brand-card {
 
-
     background:white;
-
 
     padding:35px;
 
-
     border-radius:20px;
-
 
     box-shadow:
 
     0 12px 30px rgba(0,0,0,.12);
 
-
 }
-
 
 
 
 .brand-card h3 {
 
-
     color:var(--brown);
-
 
     font-size:25px;
 
-
-    margin-bottom:15px;
-
-
 }
-
 
 
 
 .brand-card h4 {
 
-
     color:var(--gold);
-
 
     margin-top:20px;
 
-
 }
-
 
 
 
 .brand-card ul {
 
-
     margin-left:20px;
-
 
 }
 
@@ -626,23 +456,17 @@ section {
 
 
 
-/* FATIYAH IMAGE ONLY */
-
+/* FATIYAH ONLY */
 
 .fatiyah-gallery {
 
-
     display:grid;
-
 
     grid-template-columns:repeat(2,1fr);
 
-
     gap:15px;
 
-
     margin-bottom:25px;
-
 
 }
 
@@ -650,21 +474,15 @@ section {
 
 .fatiyah-gallery img {
 
-
     width:100%;
-
 
     height:230px;
 
-
     object-fit:cover;
-
 
     border-radius:15px;
 
-
 }
-
 
 
 
@@ -679,69 +497,35 @@ section {
 
 .service-grid {
 
-
     display:grid;
-
 
     grid-template-columns:repeat(4,1fr);
 
-
     gap:25px;
 
-
 }
-
 
 
 
 .service-card {
 
-
     background:white;
-
 
     padding:25px;
 
-
     border-radius:18px;
-
 
     border-top:5px solid var(--gold);
 
-
-    transition:.3s;
-
-
 }
-
-
-
-
-.service-card:hover {
-
-
-    transform:translateY(-8px);
-
-
-    box-shadow:
-
-    0 15px 30px rgba(0,0,0,.15);
-
-
-}
-
 
 
 
 .service-card h3 {
 
-
     color:var(--brown);
 
-
 }
-
-
 
 
 
@@ -756,46 +540,33 @@ section {
 
 .why-us {
 
-
     background:var(--cream-dark);
 
-
 }
-
 
 
 
 .why-grid {
 
-
     display:grid;
-
 
     grid-template-columns:repeat(4,1fr);
 
-
     gap:25px;
 
-
 }
-
 
 
 
 .why-card {
 
-
     background:white;
-
 
     padding:25px;
 
-
     border-radius:18px;
 
-
 }
-
 
 
 
@@ -810,26 +581,19 @@ section {
 
 #career ul {
 
-
     max-width:500px;
-
 
     margin:25px auto;
 
-
 }
-
 
 
 
 #career li {
 
-
     margin:10px;
 
-
 }
-
 
 
 
@@ -844,39 +608,23 @@ section {
 
 .gallery-empty {
 
+    min-height:200px;
 
     background:white;
 
-
-    min-height:200px;
-
-
     border-radius:20px;
-
 
     display:flex;
 
-
     justify-content:center;
-
 
     align-items:center;
 
-
     text-align:center;
-
 
     padding:40px;
 
-
-    box-shadow:
-
-    0 10px 25px rgba(0,0,0,.08);
-
-
 }
-
-
 
 
 
@@ -891,117 +639,79 @@ section {
 
 .contact-container {
 
-
     display:grid;
-
 
     grid-template-columns:repeat(3,1fr);
 
-
     gap:25px;
 
-
 }
-
-
 
 
 
 .contact-card {
 
-
     background:white;
-
 
     padding:35px;
 
-
     border-radius:20px;
-
 
     box-shadow:
 
     0 10px 25px rgba(0,0,0,.1);
 
-
 }
-
 
 
 
 .contact-card h3 {
 
-
     color:var(--brown);
-
 
     margin-bottom:15px;
 
-
 }
-
 
 
 
 .contact-card a {
 
-
     color:#138a36;
-
 
     text-decoration:none;
 
-
 }
-
-
 
 
 
 .contact-detail {
 
-
     margin-top:25px;
-
 
     padding-top:20px;
 
-
     border-top:1px solid #eee;
 
-
 }
-
-
 
 
 
 .contact-detail h4 {
 
-
     color:var(--gold);
-
 
     margin-bottom:5px;
 
-
-    font-size:16px;
-
-
 }
-
 
 
 
 .contact-detail p {
 
-
     margin:0;
 
-
 }
-
-
 
 
 
@@ -1016,33 +726,23 @@ section {
 
 footer {
 
-
     background:var(--dark);
-
 
     color:white;
 
-
     text-align:center;
-
 
     padding:50px 20px;
 
-
 }
-
 
 
 
 footer h2 {
 
-
     color:var(--gold-light);
 
-
 }
-
-
 
 
 
@@ -1058,43 +758,30 @@ footer h2 {
 @media(max-width:900px){
 
 
-
 nav {
-
 
     flex-direction:column;
 
-
 }
-
-
 
 
 nav ul {
 
-
     margin-top:20px;
-
 
     flex-wrap:wrap;
 
-
     justify-content:center;
 
-
 }
-
 
 
 
 .hero h1 {
 
-
     font-size:35px;
 
-
 }
-
 
 
 
@@ -1104,34 +791,25 @@ nav ul {
 .why-grid,
 .contact-container {
 
-
     grid-template-columns:1fr;
 
-
 }
-
 
 
 
 .fatiyah-gallery {
 
-
     grid-template-columns:1fr;
 
-
 }
-
 
 
 
 section {
 
-
     padding:60px 6%;
 
-
 }
-
 
 
 }
