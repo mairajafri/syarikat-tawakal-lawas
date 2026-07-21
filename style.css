@@ -1,288 +1,534 @@
 /* =========================
-   GENERAL SETTINGS
+   GLOBAL SETTINGS
 ========================= */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
+
 
 html {
     scroll-behavior: smooth;
 }
 
-body {
-    background: #f8f9fc;
-    color: #333;
-    line-height: 1.6;
-}
 
-a {
-    text-decoration: none;
-    color: inherit;
+body {
+    background: #fafafa;
+    color: #333;
+    line-height: 1.7;
 }
 
 
 /* =========================
-   NAVIGATION BAR
+   NAVIGATION
 ========================= */
 
 header {
-    background: #111827;
-    color: white;
-    position: fixed;
-    width: 100%;
+    background: white;
+    position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
-.navbar {
-    max-width: 1100px;
+
+nav {
+    max-width: 1200px;
     margin: auto;
-    padding: 20px;
+    padding: 15px 30px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+
+
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.nav-links {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-}
-
-.nav-links a {
-    color: white;
-    font-size: 15px;
-    transition: 0.3s;
-}
-
-.nav-links a:hover {
-    color: #60a5fa;
-}
-
-
-/* =========================
-   HERO SECTION
-========================= */
-
-.hero {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 120px 20px 50px;
-}
-
-.hero-container {
-    max-width: 1100px;
     display: flex;
     align-items: center;
-    gap: 50px;
-}
+    gap: 12px;
 
-.profile-img {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #2563eb;
-}
-
-.hero-text h1 {
-    font-size: 45px;
-    color: #111827;
-}
-
-.hero-text span {
-    color: #2563eb;
-}
-
-.hero-text p {
-    margin: 20px 0;
+    font-weight: 700;
+    color: #8b0000;
     font-size: 18px;
 }
 
 
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #2563eb;
-    color: white;
-    border-radius: 30px;
-    transition: 0.3s;
-}
 
-.btn:hover {
-    background: #1d4ed8;
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
 }
 
 
-/* =========================
-   SECTION DESIGN
-========================= */
 
-section {
-    padding: 80px 10%;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 35px;
-    margin-bottom: 40px;
-    color: #111827;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about {
-    background: white;
-}
-
-.about p {
-    text-align: center;
-    max-width: 800px;
-    margin: auto;
-}
-
-
-/* =========================
-   TIMELINE EXPERIENCE
-========================= */
-
-.timeline {
-    max-width: 900px;
-    margin: auto;
-}
-
-.timeline-item {
-    background: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-left: 5px solid #2563eb;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-}
-
-.timeline-item h3 {
-    color: #2563eb;
-}
-
-
-/* =========================
-   PROJECT CARDS
-========================= */
-
-.project-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+nav ul {
+    list-style: none;
+    display: flex;
     gap: 25px;
 }
 
-.project-card {
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-    transition:.3s;
+
+
+nav ul li a {
+
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+
+    transition: 0.3s;
 }
 
-.project-card:hover {
-    transform:translateY(-5px);
+
+
+nav ul li a:hover {
+    color: #b8860b;
 }
+
+
+
 
 
 /* =========================
-   SKILLS
+   HERO
 ========================= */
 
-.skills-container {
+
+.hero {
+
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: linear-gradient(
+        rgba(255,255,255,0.95),
+        rgba(255,255,255,0.95)
+    );
+
+}
+
+
+
+.hero-logo {
+
+    width: 180px;
+    margin-bottom: 25px;
+
+}
+
+
+
+.hero h1 {
+
+    font-size: 42px;
+    color: #8b0000;
+
+}
+
+
+
+.hero h2 {
+
+    color: #b8860b;
+    margin: 10px 0 20px;
+
+}
+
+
+
+.hero p {
+
+    max-width: 850px;
+    margin: 10px auto;
+
+}
+
+
+
+.hero h3 {
+
+    margin: 25px 0;
+
+    color: #444;
+
+}
+
+
+
+
+
+/* =========================
+   SECTION
+========================= */
+
+
+section {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 70px 30px;
+
+}
+
+
+
+section h2 {
+
+    text-align: center;
+
+    font-size: 32px;
+
+    color: #8b0000;
+
+    margin-bottom: 35px;
+
+}
+
+
+
+section p {
+
+    margin-bottom: 18px;
+
+}
+
+
+
+
+/* =========================
+   BRAND SECTION
+========================= */
+
+
+.brand-card {
+
+    background: white;
+
+    padding: 35px;
+
+    margin-bottom: 35px;
+
+    border-radius: 15px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+
+
+.brand-card h3 {
+
+    color:#8b0000;
+
+    font-size: 25px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.fatiyah-images {
+
     display:flex;
-    flex-wrap:wrap;
+
+    gap:20px;
+
     justify-content:center;
-    gap:15px;
+
+    margin-bottom:25px;
+
 }
 
-.skill {
-    background:#2563eb;
-    color:white;
-    padding:10px 20px;
-    border-radius:25px;
+
+
+.fatiyah-images img {
+
+    width:45%;
+
+    max-height:350px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
 }
+
+
+
 
 
 /* =========================
-   CERTIFICATION
+   LIST STYLE
 ========================= */
 
-.card {
-    background:white;
-    padding:25px;
-    margin:20px auto;
-    max-width:800px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+ul {
+
+    padding-left:25px;
+
 }
+
+
+li {
+
+    margin-bottom:10px;
+
+}
+
+
+
+
+
+
+/* =========================
+   SERVICES
+========================= */
+
+
+.service-container {
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+
+
+.service-card {
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+
+
+.service-card h3 {
+
+    color:#8b0000;
+
+    margin-bottom:12px;
+
+}
+
+
+
+
+
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+
+.check-list {
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,0.08);
+
+    list-style:none;
+
+}
+
+
+
+
+
+/* =========================
+   CAREER
+========================= */
+
+
+#career {
+
+    background:#fff8e7;
+
+    border-radius:20px;
+
+}
+
+
+
+#career h3 {
+
+    color:#8b0000;
+
+    margin:20px 0;
+
+}
+
+
+
+
 
 
 /* =========================
    CONTACT
 ========================= */
 
-.contact {
-    text-align:center;
+
+#contact {
+
+    background:white;
+
+    border-radius:20px;
+
 }
 
-.contact a {
-    color:#2563eb;
+
+
+#contact h3 {
+
+    color:#8b0000;
+
+    margin-bottom:15px;
+
 }
+
+
+
 
 
 /* =========================
    FOOTER
 ========================= */
 
+
 footer {
-    background:#111827;
+
+    background:#8b0000;
+
     color:white;
+
     text-align:center;
-    padding:20px;
+
+    padding:35px 20px;
+
 }
+
+
+
+footer h3 {
+
+    margin-bottom:10px;
+
+}
+
+
+
+
+
+
 
 
 /* =========================
    MOBILE RESPONSIVE
 ========================= */
 
+
 @media(max-width:768px){
 
-    .hero-container{
-        flex-direction:column;
-        text-align:center;
-    }
 
-    .hero-text h1{
-        font-size:35px;
-    }
+nav {
 
+    flex-direction:column;
 
-    .nav-links{
-        display:none;
-    }
+    gap:15px;
+
+}
 
 
-    section{
-        padding:60px 5%;
-    }
+
+nav ul {
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+
+
+.hero h1 {
+
+    font-size:30px;
+
+}
+
+
+
+.hero-logo {
+
+    width:130px;
+
+}
+
+
+
+.service-container {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.fatiyah-images {
+
+    flex-direction:column;
+
+}
+
+
+
+.fatiyah-images img {
+
+    width:100%;
+
+}
+
+
+
+section {
+
+    padding:50px 20px;
+
+}
+
+
 
 }
