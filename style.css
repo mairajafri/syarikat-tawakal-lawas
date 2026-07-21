@@ -238,24 +238,13 @@ nav ul a:hover {
     color:white;
 
 
-
     background:
 
-
     linear-gradient(
-    rgba(23,18,13,.85),
-    rgba(23,18,13,.85)
-    ),
-
-
-    url("images/fatiyah1.jpg");
-
-
-
-    background-size:cover;
-
-
-    background-position:center;
+    135deg,
+    #17120d,
+    #3a2818
+    );
 
 
 }
